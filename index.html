@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会动的八卦图</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            position:fixed;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            
+        }
+        #box::before{
+            content:"";
+            display: block;
+            position:absolute;
+        }
+        #box::after{
+            content:"";
+            display: block;
+            position:absolute;
+
+        }
+        @media (max-width: 500px) {
+            #text{
+                height: 55vh;
+                overflow: auto;
+            }
+            #wrapper{
+                height: 45vh;
+            }
+        
+            #box{
+                position: relative;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,50%);
+
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <div id="wrapper">
+        <div id="box"></div>
+    </div>
+   
+    
+    <style id="style"></style>
+    <script src="./main.js"></script>
+</body>
+</html>
